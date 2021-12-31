@@ -56,19 +56,6 @@ def thread_pinger(i, q):
         # update queue : this ip is processed
         q.task_done()
 
-#prevents double modification of shared variables.
-#when one thread uses a variable, other can't access it.
-#Once done, the thread relases it.
-# lock = threading.Lock()
-# def test_port(ipAddress, target, port):
-#     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-#     try:
-#         conn = s.connect((target, port))
-#         with lock:
-#             print('port',port)
-#         conn.close()
-#     except:
-#         pass
 
 #Detects OS System and hostname with host parameter..
 def detectOS(host):
